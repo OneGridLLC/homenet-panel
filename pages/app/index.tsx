@@ -195,6 +195,7 @@ const Home: NextPage = () => {
                 {ips?.map((ip) => (
                   <TableItem
                     values={[ip["block-subnet"], settings?.asn!, "8/16/2022"]}
+                    key={ip.id}
                   />
                 ))}
               </Table>

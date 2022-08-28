@@ -43,9 +43,11 @@ const Home: NextPage = () => {
       </Head>
       <div>
         <div className="lg:w-3/6 p-[3vw]">
-          <a href="/">
-            <img src="logo.png" className="h-36" />
-          </a>
+          <Link href="/">
+            <a href="/">
+              <img src="logo.png" className="h-36" />
+            </a>
+          </Link>
           <p className="text-sm lg:text-xl text-white mt-6">
             Homenet is a modern approach to networking, with homelabber centric
             tools and ecosystems we allow for you to spend your time building

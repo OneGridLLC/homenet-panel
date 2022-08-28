@@ -15,7 +15,7 @@ const Table: React.FC<Props> = ({ children, headings }) => {
       <thead>
         <tr className="text-white border-bottom border-solid border-b-2 border-zinc-800 font-bold">
           {headings.map((heading) => (
-            <td>{heading}</td>
+            <td key={`${heading}`}>{heading}</td>
           ))}
         </tr>
       </thead>

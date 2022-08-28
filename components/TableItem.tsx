@@ -22,7 +22,7 @@ const TableItem: React.FC<Props> = ({ values }) => {
   return (
     <tr className="text-white border-bottom border-solid border-b-2 border-zinc-800 ">
       {values.map((value) => (
-        <td>{value}</td>
+        <td key={`${value}`}>{value}</td>
       ))}
     </tr>
   );
