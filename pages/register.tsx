@@ -5,6 +5,17 @@ import Navbar from "../components/Navbar";
 import { FormEventHandler, useCallback, useEffect, useState } from "react";
 import { supabaseClient } from "@supabase/auth-helpers-nextjs";
 
+function makeid(length: number) {
+  var result = "";
+  var characters =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+  var charactersLength = characters.length;
+  for (var i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * charactersLength));
+  }
+  return result;
+}
+
 const DOMAIN = "skribe.dev";
 
 const Home: NextPage = () => {
@@ -18,7 +29,7 @@ const Home: NextPage = () => {
 
       const { error } = await supabaseClient.auth.signUp({
         email,
-        password: password,
+        password: makeid(24),
       });
       if (error) {
         return setMessage(error.message);

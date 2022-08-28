@@ -136,25 +136,31 @@ const Home: NextPage = () => {
           </div>
         </div> */}
         <div className="h-full w-1/3 p-16">
-          <form className="mt-24" onSubmit={createRecord}>
-            <div className="mb-6">
-              <input
-                type="text"
-                className="form-control block w-full px-4 py-2 text-xl font-normal text-white bg-zinc-800 bg-clip-padding  rounded transition ease-in-out m-0 focus:bg-zinc-700 focus:border-red-600 focus:outline-none"
-                placeholder="Reason to join"
-                value={reason}
-                onChange={(e) => setReason(e.target.value)}
-              />
-            </div>
-            <button
-              type="submit"
-              className="inline-block px-7 py-3 bg-red-500 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out w-full"
-              data-mdb-ripple="true"
-              data-mdb-ripple-color="light"
-            >
-              Signup for Beta Access
-            </button>
-          </form>
+          {signups ? (
+            <h1 className="text-2xl font-semibold text-green-500">
+              Thank you for signing up!
+            </h1>
+          ) : (
+            <form className="mt-24" onSubmit={createRecord}>
+              <div className="mb-6">
+                <input
+                  type="text"
+                  className="form-control block w-full px-4 py-2 text-xl font-normal text-white bg-zinc-800 bg-clip-padding  rounded transition ease-in-out m-0 focus:bg-zinc-700 focus:border-red-600 focus:outline-none"
+                  placeholder="Reason to join"
+                  value={reason}
+                  onChange={(e) => setReason(e.target.value)}
+                />
+              </div>
+              <button
+                type="submit"
+                className="inline-block px-7 py-3 bg-red-500 text-white font-medium text-sm leading-snug uppercase rounded shadow-md hover:bg-red-700 hover:shadow-lg focus:bg-red-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-red-800 active:shadow-lg transition duration-150 ease-in-out w-full"
+                data-mdb-ripple="true"
+                data-mdb-ripple-color="light"
+              >
+                Signup for Beta Access
+              </button>
+            </form>
+          )}
         </div>
         <div className="h-full w-1/3 p-16 flex flex-col gap-6">
           <h1 className="text-white text-3xl">Recent News</h1>
