@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hidescroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.hidescroll::-webkit-scrollbar {
+  display: none;
+}
