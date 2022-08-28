@@ -136,7 +136,7 @@ const Home: NextPage = () => {
           </div>
         </div> */}
         <div className="h-full w-1/3 p-16">
-          {signups ? (
+          {signups?.reason ? (
             <h1 className="text-2xl font-semibold text-green-500">
               Thank you for signing up!
             </h1>
