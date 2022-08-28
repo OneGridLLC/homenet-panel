@@ -44,7 +44,7 @@ const Home: NextPage = () => {
       <div>
         <div className="lg:w-3/6 p-[3vw]">
           <Link href="/">
-            <a href="/">
+            <a>
               <img src="logo.png" className="h-36" />
             </a>
           </Link>
